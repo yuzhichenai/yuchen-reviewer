@@ -1,5 +1,8 @@
-# 宇尘审查器 - 全局安装脚本 (Windows PowerShell)
+﻿# 宇尘审查器 - 全局安装脚本 (Windows PowerShell)
 # 运行方式: 右键 -> 使用 PowerShell 运行，或 powershell -ExecutionPolicy Bypass -File install.ps1
+
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 $repoDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $globalDir = "$env:USERPROFILE\.config\opencode"
