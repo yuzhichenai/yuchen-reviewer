@@ -20,6 +20,12 @@
 
 **Windows (PowerShell):**
 ```powershell
+powershell -ExecutionPolicy Bypass -File "C:\Users\Admin\Desktop\review工具\install.ps1"
+```
+
+或先进入项目目录：
+```powershell
+cd "C:\Users\Admin\Desktop\review工具"
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
