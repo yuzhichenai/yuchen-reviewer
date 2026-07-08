@@ -33,7 +33,7 @@ chmod +x install.sh && ./install.sh
 ### 项目级安装
 
 ```bash
-git clone https://github.com/<your-username>/yuchen-reviewer.git
+git clone https://github.com/yuzhichenai/yuchen-reviewer.git
 cd yuchen-reviewer
 ```
 
