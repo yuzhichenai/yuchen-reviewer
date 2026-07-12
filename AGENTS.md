@@ -45,7 +45,7 @@ Skill 和 Agent 文件中均嵌入了严厉行为准则，核心规则：
 3. 「觉察即阻断」：thought 中意识到循环时必须立即调用 edit，禁止再产生下一个 thought
 4. 禁止任何空转模式
 5. 反循环规则放在文件最顶部，模型第一眼可见
-6. Agent 权限改为 `edit: allow` + `bash: ask`，每次 bash 需要用户确认
+6. Agent 权限改为 `edit: deny` + `bash: deny`，纯审查模式，不修改代码
 
 ## 关键开发经验
 
