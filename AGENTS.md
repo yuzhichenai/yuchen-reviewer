@@ -40,10 +40,10 @@
 
 ### 防死循环行为准则（v1.0.1 增强版）
 Skill 和 Agent 文件中均嵌入了严厉行为准则，核心规则：
-1. 编辑前绝对禁止调用 bash 做任何验证（包括 `node --check`、`ruff`、`tsc --noEmit` 等）
-2. 连续 2 次相同 bash 命令 → 死循环信号，须立即用 edit 或求援
+1. 编辑前绝对禁止调用 bash、todowrite、Read 等非 edit 工具
+2. 连续 2 次非 edit 工具 → 死循环信号，须立即用 edit 或求援
 3. 「觉察即阻断」：thought 中意识到循环时必须立即调用 edit，禁止再产生下一个 thought
-4. 禁止任何空转模式
+4. 禁止任何空转模式（bash/todowrite → think → 再 bash/todowrite → ...）
 5. 反循环规则放在文件最顶部，模型第一眼可见
 6. Agent 权限改为 `edit: deny` + `bash: deny`，纯审查模式，不修改代码
 
