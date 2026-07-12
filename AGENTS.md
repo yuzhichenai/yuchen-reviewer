@@ -4,7 +4,7 @@
 
 宇尘审查器是一个 opencode 代码审查 skill 工具，覆盖 Bug 检测、安全漏洞分析、性能评估和架构审查四大维度。以中文为母语，深度适配 deepseek 与 kimi 模型。
 
-- **版本**: v1.0.0
+- **版本**: v1.0.1
 - **GitHub**: https://github.com/yuzhichenai/yuchen-reviewer
 - **工作目录**: C:\Users\Admin\Desktop\review工具
 
@@ -42,9 +42,10 @@
 Skill 和 Agent 文件中均嵌入了「代理行为准则（避免死循环）」，核心规则：
 1. 同一文件最多读 2 次理解上下文
 2. 决定 edit/write 后立即执行，禁止只说不做
-3. 修改后验证最多再读 1 次
-4. 连续 3 个 thought 重复同一意图时必须打破循环
-5. 禁止「Read → think → 我要编辑 → Read」空转模式
+3. 编辑前 bash 验证最多执行 **1 次**，验证通过后必须立刻转向 edit，禁止再确认
+4. 连续 2 次相同 bash 命令且未编辑 → 死循环信号，必须打断
+5. 「觉察即行动」：thought 中意识到循环时必须立即调用 edit，禁止再产生下一个 thought
+6. 禁止「Read → think → 我要编辑 → Read」或「bash验证 → think → 再bash验证」空转模式
 
 ## 关键开发经验
 

@@ -13,5 +13,5 @@ mkdir -p "$GLOBAL_DIR/agents"
 cp "$REPO_DIR/.opencode/skills/宇尘审查器/SKILL.md" "$GLOBAL_DIR/skills/宇尘审查器/SKILL.md"
 cp "$REPO_DIR/.opencode/agents/宇尘审查器.md" "$GLOBAL_DIR/agents/宇尘审查器.md"
 
-echo "✅ 宇尘审查器 v1.0.0 安装成功！"
+echo "✅ 宇尘审查器 v1.0.1 安装成功！"
 echo "请重启 opencode 以生效。"

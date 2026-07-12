@@ -17,5 +17,5 @@ New-Item -ItemType Directory -Path "$globalDir\agents" -Force | Out-Null
 Copy-Item -Path "$repoDir\.opencode\skills\宇尘审查器\SKILL.md" -Destination "$globalDir\skills\宇尘审查器\SKILL.md" -Force
 Copy-Item -Path "$repoDir\.opencode\agents\宇尘审查器.md" -Destination "$globalDir\agents\宇尘审查器.md" -Force
 
-Write-Host "✅ 宇尘审查器 v1.0.0 安装成功！" -ForegroundColor Green
+Write-Host "✅ 宇尘审查器 v1.0.1 安装成功！" -ForegroundColor Green
 Write-Host "请重启 opencode 以生效。" -ForegroundColor Yellow
